@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+
+}
+
+html{
+    overflow-x: hidden;
+
+}
+
+iframe{
+    border-radius:12px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 1rem 9%;
+    background: var(--bg-color);
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index: 100;
+}
+
+.header.sticky{
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color:var(--text-color);
+    font-weight: 600;
+    cursor:pointer;
+}
+.logo span{
+    color: rgba(249, 121, 0);
+}
+
+.header .logo img{
+    width:30px;
+    margin-right:10px;
+}
+
+#anchortag{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-left: 3rem;
+    transition: .3s;
+}
+
+#anchortag:hover, #anchortag.active{
+    color: rgba(249, 121, 0);
+}
+
+#menu-icon{
+    font-size:3.6rem;
+    color: var(--text-color);
+    display:none;
+}
+
+header button{
+    background: linear-gradient(160deg,rgb(245, 0, 0),rgba(249, 121, 0));
+    width:70px;
+    padding:5px;
+    border-radius:4px;
+    font-size:1rem;
+}
+#headbtn1{
+    margin-left:25px;
+    margin-right:5px;
+}
+header button a{
+    color:black;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media (max-width:991px){
+    .header{
+        padding:0.4rem ;
+    }
+}
+
+@media (max-width:768px){
+    #menu-icon{
+        display: block;
+        font-size: 40px;
+    }
+
+    .navbar{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        display: none;
+    }
+
+    .navbar.active{
+        display: block;
+    }
+
+    #anchortag{
+        display:block;
+        font-size: 1.5rem;
+        margin:3rem 0;
+    }
+    #headbtn1{
+        margin-left:5px;
+    }
+}
+.section1{
+    height:723px;
+    background: url('https://www.bac.org.tn/wp-content/uploads/2018/07/study-background-11.jpg')no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:68px;
+    padding:20px;
+}
+.heading{
+    font-size:3.8rem;
+    font-weight: 600;
+    margin-bottom:0;
+    padding:0;
+}
+.section1 span{
+    padding:0;
+    margin-bottom:0;
+    color: rgba(249, 121, 0);
+}
+.subheading{
+    padding:0;
+    margin-top:0;
+    font-size:1.8rem;
+}
+.section1 button{
+    background: linear-gradient(160deg,rgb(245, 0, 0),rgba(249, 121, 0));
+    padding:10px;
+    border-radius: 4px;
+    margin-top:15px;
+    cursor:pointer;
+    font-size:1.2rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.section1 button a{
+    text-decoration: none;
+    color: black;
+}
+
+.section1 button:hover{
+    opacity: 1;
+   transform: scale(1.1);
+}
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:50px;
+}
+.section2 h3{
+    margin-top: 10px;
+    font-size:2rem;
+    font-weight: 500;
+}
+
+.bigbox{
+    margin-top:30px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.box{
+    box-shadow: 1px 2px 10px rgb(69, 69, 69);
+    border-radius:12px;
+    object-fit: cover;
+    width:384px;
+    margin:20px;
+}
+.content{
+    padding:12px;
+}
+.content button{
+    cursor: pointer;
+    background: var(--bg-color);
+    color:white;
+    margin-top:15px;
+    padding:10px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.8;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.content button a{
+    text-decoration: none;
+    color:white;
+}
+.content button:hover{
+    opacity: 1;
+    transform: scale(1.05);
+}
+.box p{
+    margin-top:10px;
+    margin-bottom:5px;
+    color:rgb(113, 113, 113);
+}
+.boximg img{
+    border-radius: 12px;
+}
+
+.section3{
+    height:723px;
+    background: linear-gradient(160deg,rgba(46, 45, 45, 0.8),rgba(12,12,12,0.8)),url('https://wallpaperaccess.com/full/2018970.jpg')no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin-top:50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section3 h3{
+    color:white;
+    margin-top: 10px;
+    font-size:2rem;
+    font-weight: 500;
+}
+.homeform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.homeform div{
+    margin-bottom:20px;
+}
+.form2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#homeemail{
+    width:320px;
+}
+#fbtn{
+    font-size:18px;
+    cursor: pointer;
+    opacity: 0.8;
+    border:none;
+   font-weight: 600;
+    background: linear-gradient(160deg,rgb(245, 0, 0),rgba(249, 121, 0));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:100px;
+}
+#fbtn:hover{
+    opacity: 0.9;
+}
+#fbtn:active{
+    opacity: 1;
+}
+.form2 input{
+    width:300px;
+    margin:5px;
+}
+
+textarea{
+    border: 1px solid rgb(101, 98, 98);
+    background-color: rgb(232, 232, 232);
+    font-size: 16px;
+    border-radius: 4px;
+    padding:10px;
+    resize: none;
+}
+
+@media (max-width:1284px){
+    .bigbox{
+        grid-template-columns: repeat(2,auto);
+    }
+}
+@media (max-width:849px){
+    .bigbox{
+       grid-template-columns: repeat(1,auto);
+    }
+    .heading{
+        font-size:3.5rem;
+    }
+    .section1{
+        height:600px;
+    }
+}
+@media (max-width:991px){
+    .section1{
+        margin-top:48px;
+    }
+}
+@media (max-width:735px){
+    .heading{
+        font-size:3rem;
+    }
+    .section1{
+        height:550px;
+    }
+}
+@media (max-width:642px){
+    .form2 input{
+        width:200px;
+    }
+    textarea{
+        width:500px;
+    }
+    .section1{
+        height:500px;
+    }
+    .heading{
+        font-size:2.8rem;
+    }
+    
+}
+@media (max-width:596px){
+    .heading{
+        font-size: 3.2rem;
+    }
+    .section1{
+        background-position: center;
+        height:500px;
+        text-align: left;
+    }
+    .section1 p{
+        width:100%;
+        text-align: left;
+    }
+    .buttonleft{
+        margin-left:15px;
+        margin-top:20px;
+        width:100%;
+        display: flex;
+        align-items: left;
+    }
+    textarea{
+        width:320px;
+    }
+    .form2 input{
+        width:100%;
+        display: block;
+    }
+    .box{
+        width:300px;
+    }
+    .boximg img{
+        width:300px;
+    }
+    .section2 h3{
+        margin-left:20px;
+    }
+}
+
+.coursessection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:80px;
+}
+.scourses{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+
+.coursesbox{
+    box-shadow: 1px 2px 10px rgb(69, 69, 69);
+    margin:30px;
+    width:560px;
+    border-radius:12px;
+}
+.coursescontent{
+    padding:10px;
+    
+}
+.coursescontent button{
+    font-size: 16px;
+    background: linear-gradient(160deg,rgb(245, 0, 0),rgba(249, 121, 0));
+    border-radius:4px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top:20px;
+    margin-bottom:10px;
+    padding:10px;
+    opacity: 0.8;
+}
+.coursescontent button a{
+    text-decoration: none;
+    color:black;
+}
+.coursescontent button:hover{
+    opacity: 0.9;
+}
+.coursescontent button:active{
+    opacity:1;
+}
+
+@media(max-width:1238px){
+    .scourses{
+        grid-template-columns: repeat(1,auto);
+    }
+}
+@media(max-width:622px){
+    .coursesbox{
+        width:300px;
+    }
+    .coursesbox iframe{
+        width:300px;
+    }
+}
+.doc{
+    margin:auto;
+    width: max-content;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px rgb(139, 139, 139),
+                -1px -1px 2px rgb(139, 139, 139);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:80px;
+}
+.subdoc{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+.loginimage{
+    background: url('https://stablefordcapital.com/wp-content/uploads/2020/03/young-business-man-with-laptop-on-phone-reviewing-insurance-planning.jpeg')no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width:400px;
+    height:100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.formfill{
+    padding:20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    width:400px;
+}
+#formimg{
+    width:78px;
+}
+.formfill h3{
+    margin-top: 8px;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.formfill h4{
+    color: rgb(101, 98, 98);
+    font-size: 1.2rem;
+    margin:0;
+    font-weight: 100;
+    padding: 0;
+    margin-bottom:8px;
+}
+
+.btn{
+    border-radius:4px;
+    font-size: 1rem;
+    border:1px solid rgb(92, 167, 252);
+    padding:10px;
+    cursor: pointer;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+.btn:hover{
+    background: rgb(218, 235, 255) ;
+}
+.btn img{
+    width:18px;
+    margin-right:8px;
+}
+.gap{
+    margin-top:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:300px;
+
+}
+.gap h4{
+    margin-top:6px;
+    font-size:14px;
+}
+.gap a{
+    text-decoration: none;
+}
+form{
+    margin-top:20px;
+    width:300px;
+}
+#formh4{
+    text-align: left;
+ color:black;
+ font-weight: 550;
+}
+#formh5{
+    text-align: left;
+ color:black;
+ font-weight: 550;
+ position: relative;
+}
+#formh5:after{
+    color: rgb(101, 98, 98);
+    content:'Forgot Password?';
+    position: absolute;
+    font-weight: 100;
+    top: 5px;
+    right: -21px;
+    font-size:12px;
+    margin-right:0;
+    text-align: right;
+    cursor: pointer;
+}
+input{
+    border: 1px solid rgb(101, 98, 98);
+    background-color: rgb(232, 232, 232);
+    font-size: 16px;
+    border-radius: 4px;
+    padding:10px;
+    width:100%;
+    display: flex;
+    align-items: left;
+    margin-bottom:20px;
+}
+form button{
+    border:none;
+    border-radius: 4px;
+    color:white;
+    background-color: rgb(82, 82, 82);
+    font-weight: 600;
+    padding: 10px;
+    width:100%;
+}
+form button:hover{
+    background-color: rgb(51, 51, 51);
+}
+footer{
+    text-align: center;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    margin-top: 53px;
+    margin-bottom: 0;
+    color:var(--text-color);
+    background-color: var(--bg-color);
+}
+footer span{
+    margin:5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+footer h3{
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+footer h3 span{
+    color: rgba(249, 121, 0);
+}
+footer img{
+    width:30px;
+    margin-right:5px;
+}
+.signupimage{
+    background: url('https://theswissquality.ch/wp-content/uploads/2020/03/men-shake-hands-at-business-meeting.jpg')no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width:400px;
+    height:100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+@media (max-width:850px){
+    .loginimage{
+        display: none;
+    }
+    .signupimage{
+        display: none;
+    }
+}
+@media(max-width:634px){
+    footer{
+        padding: 5px;
+        flex-direction: column;
+    }
+}
+@media(max-width:465px){
+    .formfill{
+        width:320px;
+    }
+    form button{
+        width:280px;
+    }
+    input{
+        width:280px;
+        margin-left:9px;
+    }
+    #formh4{
+        margin-left:9px;
+    }
+    #formh5{
+        margin-left:9px;
+    }
+    #formh5:after{
+        right: -2px;
+    }
+}
+@media(max-width:364px){
+    footer h3{
+        font-size: 17.5px;
+    }
+    footer img{
+        display: none;
+    }
+    .icons{
+        margin-bottom: 8px;
+    }
+}
+@media(max-width:380px){
+    footer img{
+        display:none;
+    }
+    
+}
